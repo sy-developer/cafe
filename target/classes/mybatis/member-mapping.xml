@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.memberMapper">
+	<insert id="write" parameterType="memberDTO">
+		insert into membership values
+		(memberNum.nextval, '1', #{id}, #{pwd}, #{name}, #{age}, #{email}, #{tel}, #{addr1},
+		#{addr2}, #{addr3}, sysdate)
+	</insert>
+
+	<select id="login" parameterType="java.util.Map"
+		resultType="String">
+		select * from membership where id=#{id} and pwd=#{pwd}
+	</select>
+	<!-- resultType은 boolean은 사용못함 select의 결과로 받은 값만 리턴 -->
+	<select id="isExistId" parameterType="String"
+		resultType="String">
+		select * from membership where id=#{id}
+	</select>
+
+	<!-- 장수훈 추가 : 결제정보/마이페이지 고객 정보 dto로 담아내기 -->
+	<select id="memberView" parameterType="String"
+		resultType="memberDTO">
+		select * from membership where id=#{id}
+	</select>
+
+	<update id="modify" parameterType="memberDTO">
+		update membership set
+		age=#{age}, tel=#{tel}, email=#{email}, addr1=#{addr1},
+		addr2=#{addr2}, addr3=#{addr3}
+		where id=#{id}
+	</update>
+
+	<update id="modify_pw" parameterType="memberDTO">
+		update membership set
+		pwd=#{pwd} where id=#{id}
+	</update>
+
+	<select id="check_pw" parameterType="java.util.Map"
+		resultType="String">
+		select count(*) as cnt from membership where id=#{id} and
+		pwd =#{pwd}
+	</select>
+
+	<select id="find_id" parameterType="java.util.Map"
+		resultType="String">
+		select id from membership where name=#{name} and tel=#{tel}
+	</select>
+	
+	<select id="find_pw" parameterType="java.util.Map"
+		resultType="String">
+		select pwd from membership where id=#{id} and name=#{name} and tel=#{tel}
+	</select>
+	
+	<delete id="drop_id" parameterType="java.util.Map">
+		delete from membership where id=#{id} and pwd=#{pwd}
+	</delete>
+
+</mapper>
