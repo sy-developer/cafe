@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.marketMapper">
+	<!-- 장바구니에 담기 -->
+	<insert id="insert" parameterType="marketDTO">
+		insert into market (market_id,
+		id, name, stock_num, menu_name, price, money, amount, image, info)
+		values
+		(seq_market.nextval, #{id}, #{name}, #{stock_num}, #{menu_name}, #{price}, #{money}, #{amount}, #{image}, #{info})
+	</insert>
+
+	<select id="listMarket" parameterType="String" resultType="marketDTO">
+		select * from market where id=#{id}
+	</select>
+
+	<select id="sumMoney" resultType="int">
+
+		select nvl(sum(price*amount),0)
+
+		from market c,menu p
+
+		where c.stock_num=p.stock_num and id=#{id}
+
+	</select>
+	
+	<update id="update" parameterType="marketDTO">
+		update market set amount = #{amount} where id = #{id} and stock_num= #{stock_num}
+	</update>
+	
+	<select id="countMarket" parameterType="java.util.Map" resultType="int">
+		select count(*) as cnt from market where id=#{id} and stock_num=#{stock_num}
+   </select>
+   
+   <select id="amount" parameterType="java.util.Map" resultType="int">
+		select amount from market where id =#{id} and stock_num=${stock_num}
+   </select>
+
+	<!-- 장바구니 개별 상품 삭제 -->
+	<delete id="delete" parameterType="java.util.Map">
+		delete from market where stock_num= #{stock_num} and id=#{id}
+	</delete>
+	
+	<select id="marketView" parameterType="java.util.Map" resultType="marketDTO">
+      select * from market where id=#{id} and stock_num=#{stock_num}
+   </select>
+
+
+
+
+</mapper>

@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+body {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+main {
+	text-align: left;
+	width: 1300px;
+	height: none;
+	margin: auto;
+	padding-top: 150px;
+}
+
+section {
+	margin-left: 240px;
+}
+
+table {
+	background-color: #34c2b500;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+	display: table;
+	text-indent: initial;
+	border-spacing: 2px;
+	border-color: grey;
+	width: 1080px;
+	margin: auto;
+}
+
+.user-name {
+	padding: 10px;
+	font-size: 15px;
+	width: 20%;
+	border: 1px solid #aaa;
+}
+
+.recive-name {
+	padding: 10px;
+	font-size: 15px;
+	width: 20%;
+	border: 1px solid #aaa;
+}
+
+.user-phone {
+	padding: 10px;
+	font-size: 15px;
+	width: 30%;
+	margin: 5px 0px;
+	border: 1px solid #aaa;
+}
+
+.recive-phone {
+	padding: 10px;
+	font-size: 15px;
+	width: 30%;
+	margin: 5px 0px;
+	border: 1px solid #aaa;
+}
+
+.form-email {
+	padding: 10px;
+	font-size: 15px;
+	width: 50%;
+	margin: 5px 0px;
+	border: 1px solid #aaa;
+}
+
+.recive-addr1 {
+	padding: 10px;
+	font-size: 15px;
+	width: 20%;
+	margin: 5px 0px;
+	border: 1px solid #aaa;
+}
+
+.recive-addr2 {
+	padding: 10px;
+	font-size: 15px;
+	width: 50%;
+	margin: 5px 0px;
+	border: 1px solid #aaa;
+}
+
+.form-house_phone {
+	padding: 10px;
+	font-size: 15px;
+	width: 20%;
+	margin: 5px 0px;
+	border: 1px solid #aaa;
+}
+
+.form-request {
+	padding: 10px;
+	font-size: 15px;
+	width: 90%;
+	margin: 5px 0px;
+	border: 1px solid #aaa;
+}
+
+h4 {left;
+	padding: 0;
+	margin: 25px 3px 7px 0;
+}
+
+.checkyourpurchase {
+	text-align: center;
+}
+
+.purchase-button {
+	padding: 0.6rem;
+	font-size: 14px;
+	width: 10%;
+	height: 55px;
+	background-color: #C80A1E;
+	border: white;
+	color: white;
+	cursor: pointer;
+}
+
+.purchase-button2 {
+	padding: 0.6rem;
+	font-size: 14px;
+	width: 10%;
+	height: 55px;
+	background-color: black;
+	border: white;
+	color: white;
+	cursor: pointer;
+}
+
+.purchase-button:hover {
+	padding: 0.6rem;
+	font-size: 14px;
+	width: 10%;
+	background-color: darkorange;
+	color: white;
+}
+
+.purchase-button2:hover {
+	padding: 0.6rem;
+	font-size: 14px;
+	width: 10%;
+	background-color: #aaa;
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+footer > .buy_list2 {
+	margin-left: 50px;
+}
+
+.buy_list1 {
+	flex: 2;
+	margin-left: 160px;
+}
+
+.buy_list2 {
+	flex: 3;
+	margin-right: 55px;
+	margin-left: 150px;
+}
+
+.row-empty {
+	height: 20px;
+}
+
+.item_list>.item_list2>.item_title {
+	display: inline-block;
+	list-style: none;
+}
+
+div.area {
+	display: none;
+}
+
+div.area.on {
+	display: block;
+}
+
+.bottomline {
+	border-bottom: 1px solid black;
+}
+
+.item_info_color {
+	background-color: beige;
+}
+
+.text_textarea {
+	width: 250px;
+	height: 125px;
+	min-height: 125px;
+	max-height: 125px;
+	min-width: 300px;
+	max-width: 300px;
+	border-style: none;
+	resize: none;
+	padding-top: 20px;
+	background-color: beige;
+}
+
+.text_textarea:focus {
+	width: 250px;
+	height: 125px;
+	min-height: 125px;
+	max-height: 125px;
+	min-width: 300px;
+	max-width: 300px;
+	border-style: none;
+	resize: none;
+	padding-top: 20px;
+	background-color: beige;
+	outline: none;
+}
+
+.input_text_style {
+	text-align: center;
+	border-style: none;
+	outline: none;
+	background-color: beige;
+}
+
+.price {
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.addr-btn2 {
+	padding: 0.5rem;
+	font-size: 16px;
+	width: 20%;
+	background-color: dimgrey;
+	border: none;
+	color: white;
+	cursor: pointer;
+	margin-right: 25px
+}
+
+.selectbox {
+	width: 200px; /* 원하는 너비설정 */
+	padding: .8em .5em; /* 여백으로 높이 설정 */
+	font-family: inherit; /* 폰트 상속 */
+	background:
+		url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+		no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+	border: 1px solid #999;
+	border-radius: 0px; /* iOS 둥근모서리 제거 */
+	-webkit-appearance: none; /* 네이티브 외형 감추기 */
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.selectbox:focus {
+	width: 200px; /* 원하는 너비설정 */
+	padding: .8em .5em; /* 여백으로 높이 설정 */
+	font-family: inherit; /* 폰트 상속 */
+	background:
+		url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+		no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+	border: 1px solid #999;
+	border-radius: 0px; /* iOS 둥근모서리 제거 */
+	-webkit-appearance: none; /* 네이티브 외형 감추기 */
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+}
+
+.input-number {
+	width: 200px; /* 원하는 너비설정 */
+	padding: .3em .3em; /* 여백으로 높이 설정 */
+}
